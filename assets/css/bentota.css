@@ -1,0 +1,204 @@
+:root {
+    --white: rgb(255, 255, 255);
+    --off-white: rgb(227,243,243);
+    --black: rgb(10, 10, 10);
+    --dark-blue: rgb(108, 169, 219);
+    --light-blue: rgb(0, 242, 254);
+    --grey: rgb(143, 143, 143);
+    --green: rgb(10,181,142);
+    --light-green: rgba(165,232,135,255);
+}
+
+/* ------------- */
+/* TITLE SECTION */
+/* ------------- */
+
+.page-title-section {
+    margin-bottom: 5%;
+    background-image: url(../images/bentota-main.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* ------------ */
+/* INFO SECTION */
+/* ------------ */
+
+.hatchery-info-section {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 10% 5% 10%;
+}
+
+.hatchery-info-section h2 {
+    width: 20%;
+}
+
+.hatchery-info-section span {
+    width: 60%;
+    padding: 1% 5% 1% 5%;
+    font-weight: 100;
+}
+
+.hatchery-info-section iframe {
+    width: 20%;
+    height: 20%;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .hatchery-info-section {
+        flex-direction: column;
+    }
+
+    .hatchery-info-section h2 {
+        width: 100%;
+    }
+
+    .hatchery-info-section span {
+        font-size: 0.8rem;
+    }e
+
+    .hatchery-info-section iframe {
+        width: 5dvh;
+        height: 5dvh;
+    }
+}
+
+/* ------------- */
+/* TO DO SECTION */
+/* ------------- */
+
+.hatchery-to-dos-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 10% 5% 10%;
+}
+
+
+.to-do-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.to-do-container:nth-of-type(2n) {
+    flex-direction: column-reverse;
+}
+
+.to-do-img-container {
+    width: 50dvw;
+    height: 50dvh;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 2%;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#first-to-do-img {
+    background-image: url(../images/feeding-1.jpg);
+}
+#second-to-do-img {
+    background-image: url(../images/night-time-1.avif);
+}
+#third-to-do-img {
+    background-image: url(../images/volunteer-1.jpg);
+}
+#fourth-to-do-img {
+    background-image: url(../images/turtle-in-tank-1.jpg);
+}
+
+.to-do-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin: 0 5%;
+}
+
+.hatchery-to-dos-section h3 {
+    margin-top: 5%;
+    padding: 5px;
+    animation: left-right-text 2s infinite ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+    .hatchery-to-dos-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 5% 5% 5%;
+    }
+
+    .to-do-body h3 {
+        font-size: 1rem;
+    }
+
+    .to-do-body span {
+        font-size: 0.6rem;
+    }
+
+    .hatchery-info-section iframe {
+        width: 25dvh;
+        height: 25dvh;
+    }
+}
+
+@keyframes left-right-text {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 10px 0;
+    }
+}
+
+/* -------------- */
+/* GALLERY SECTION */
+/* -------------- */
+
+.gallery-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 10% 5% 10%;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-section img {
+    width: 100%;
+    height: 30dvh;
+    margin: 1% 0;
+    object-fit: cover;
+    transition: filter 1s ease-in-out;
+}
+
+.gallery-section img:hover {
+    filter: brightness(60%);
+}

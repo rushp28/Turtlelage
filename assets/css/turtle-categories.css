@@ -1,0 +1,255 @@
+:root {
+    --white: rgb(255, 255, 255);
+    --off-white: rgb(227,243,243);
+    --black: rgb(10, 10, 10);
+    --dark-blue: rgb(108, 169, 219);
+    --light-blue: rgb(0, 242, 254);
+    --grey: rgb(143, 143, 143);
+    --green: rgb(10,181,142);
+    --light-green: rgba(165,232,135,255);
+}
+
+/* ------------- */
+/* TITLE SECTION */
+/* ------------- */
+
+.page-title-section {
+    margin-bottom: 1%;
+    background-image: url(../images/turtle-categories-main.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* ------------- */
+/* INFO SECTION */
+/* ------------- */
+
+.info, .turtle-img,
+.info-body-main, .info-title, 
+.info-description {
+    display: flex;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.turtle-info-section {
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 18% 5% 18%;
+}
+
+.info, .info-body-stats {
+    flex-direction: column;
+}
+
+.info {
+    margin: 1% 0;
+}
+
+.info-body-main {
+    margin: 5% 0;
+}
+
+.info-title, .info-description,
+.turtle-img {
+    align-items: center;
+    justify-content: center;
+}
+
+.info-title h2 {
+    width: 100%;
+    margin: 0 5%;
+    padding: 10px 0;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.turtle-img img, .turtle-map, 
+.turtle-map iframe {
+    width: 20dvw;
+    height: 20dvw;
+    object-fit: cover;
+}
+
+.turtle-img, .turtle-map {
+    margin: 0 1%;
+}
+
+.turtle-img {
+    filter: brightness(80%);
+}
+
+.info-description {
+    margin-bottom: 2%;
+}
+
+.info-description span {
+    padding: 1% 5% 1% 5%;
+    color: var(--grey);
+    font-weight: 100;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .turtle-info-section {
+        width: 90%;
+        margin: 0 5% 5% 5%;
+    }
+
+    .info-body-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .turtle-img img {
+        width: 80dvw;
+        height: 40dvw;
+    }
+
+    .turtle-map, .turtle-map iframe {
+        width: 40dvw;
+        height: 40dvw;
+    }
+
+    .info-title {
+        margin: 5% 0;
+    }
+
+    .info-title h2 {
+        font-size: 1.4rem;
+    }
+
+    .info-description {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 1299px) and (min-width: 768px) {
+    .turtle-info-section {
+        width: 80%;
+        margin: 0 10% 5% 10%;
+    }
+
+    .info-body-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .turtle-img img {
+        width: 70dvw;
+        height: 20dvw;
+    }
+
+    .turtle-map, .turtle-map iframe {
+        width: 30dvw;
+        height: 30dvw;
+    }
+
+    .info-title {
+        margin: 5% 0;
+    }
+
+    .info-title h2 {
+        font-size: 1.8rem;
+    }
+
+    .info-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* ------------- */
+/* TABLE SECTION */
+/* ------------- */
+
+.turtle-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, 
+td {
+    padding: 1rem;
+}
+
+th {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+caption {
+    padding: 2% 0;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+th {
+    background-image: linear-gradient(var(--light-green), var(--green));
+    font-weight: 800;
+}
+
+tr {
+    border: 1px solid var(--black);
+}
+
+tr:nth-of-type(1n) {
+    background-color: var(--white);
+}
+
+tr:nth-of-type(2n) {
+    background-color: var(--green);
+    color: var(--black);
+}
+
+td {
+    font-size: 0.9rem;
+}
+
+tfoot td {
+    background-image: linear-gradient(var(--green), var(--light-green));
+    text-align: center;
+}
+
+@media (max-width: 868px) {
+    .turtle-summary-table {
+        width: 90%;
+        margin: 5% 5%;
+    }
+    th {
+        display: none;
+
+    }
+
+    td, td::before {
+        font-size: 0.8rem;
+    }
+
+    td {
+        display: grid;
+        grid-template-columns: 15ch auto;
+        padding: 0.5rem 1rem;
+    }
+
+    td::before {
+        content: attr(data-cell);
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    tfoot td::before {
+        padding-top: 8px;
+    }
+}

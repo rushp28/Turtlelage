@@ -1,0 +1,157 @@
+:root {
+    --white: rgb(255, 255, 255);
+    --off-white: rgb(227,243,243);
+    --black: rgb(10, 10, 10);
+    --dark-blue: rgb(108, 169, 219);
+    --light-blue: rgb(0, 242, 254);
+    --grey: rgb(143, 143, 143);
+    --green: rgb(10,181,142);
+    --light-green: rgba(165,232,135,255);
+}
+
+h2 {
+    padding: 20px 0;
+    font-size: 2rem;
+}
+
+/* ------------- */
+/* TITLE SECTION */
+/* ------------- */
+
+.page-title-section {
+    margin-bottom: 1%;
+    background-image: url(../images/threats-to-turtles-main.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* ------------- */
+/* INFO SECTION */
+/* ------------- */
+
+.threat-info-section {
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 10% 5% 10%;
+}
+
+.threat-info-section, .threat-container,
+.info-body, .info-body div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.threat-info-section,.threat-container, 
+.info-body div {
+    flex-direction: column;
+}
+
+.threat-img-container {
+    width: 40dvw;
+    height: 40dvh;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 2% 0;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#first-threat-img {
+    background-image: url(../images/habitat-destruction.jpg);
+}
+#second-threat-img {
+    background-image: url(../images/marine-pollution.jpg);
+}
+#third-threat-img {
+    background-image: url(../images/illegal-trade.webp);
+}
+#fourth-threat-img {
+    background-image: url(../images/ghost-fishing.jpg);
+}
+
+.info-body {
+    justify-content: start;
+    align-items: start;
+}
+
+.info-body div {
+    width: 33.33%;
+}
+
+.threat-container h3 {
+    padding: 20px;
+}
+
+.threat-container span {
+    padding: 0 5%;
+}
+
+.conservation-link {
+    margin-top: 1%;
+}
+
+.conservation-link span {
+    color: var(--green);
+}
+
+.conservation-link span:hover {
+    cursor: pointer;
+    color: var(--light-green);
+}
+
+@media screen and (max-width: 1268px) {
+    .threat-img-container {
+        width: 60dvw;
+        height: 30dvh;
+    }
+
+    .info-body {
+        flex-direction: column;
+    }
+
+    .info-body div {
+        width: 100%;
+    }
+
+    .threat-container h3 {
+        font-size: 0.9rem;
+    }
+
+    .threat-container span {
+        font-size: 0.6rem;
+    }
+}
+
+/* ---------------------- */
+/* HATCHERY LINKS SECTION */
+/* ---------------------- */
+
+.hatchery-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 10% 5% 10%;
+}
+
+.hatchery-links a {
+    padding: 1% 5%;
+    margin-bottom: 10px;
+    background-color: var(--green);
+    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 1s ease-in-out;
+}
+
+.hatchery-links a:hover {
+    transform: translate(20px, 0);
+}
