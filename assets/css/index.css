@@ -139,6 +139,7 @@
     }
 
     .intro-description {
+        padding: 20px 2%;
         font-size: 0.8rem;
     }
 }
@@ -340,8 +341,6 @@
     .threat-description {
         font-size: 0.8rem;
     }
-
-    
 }
 
 /* ---------------- */
@@ -377,6 +376,12 @@
 
 .location-section h3 {
     margin: 10px 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .location-container img {
+        width: 70dvw;
+    }
 }
 
 /* KEYFRAMES */
