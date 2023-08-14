@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/common-booking.css">
+    <link rel="stylesheet" href="assets/css/tickets.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="assets/images/logo.png">
+
+    <title>Turtlelage - Tickets</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <h1>Buy Tickets</h1>
+        </section>
+
+        <section class="body-section">
+
+            <section class="interactive-body-section">
+
+                <section class="calendar-section">
+
+                    <span class="instructions-span">Please select,</span>
+                    <h2>Date</h2>
+        
+                    <div class="calendar">
+        
+                        <div class="calendar-head">
+                                
+                            <div id="previous-button">
+                                <img class="previous-icon" src="assets/icons/triangle.svg" alt="prev-icon">
+                            </div>
+        
+                            <h3 class="month-year"></h3>
+        
+                            <div id="next-button">
+                                <img class="next-icon" src="assets/icons/triangle.svg" alt="next-icon">
+                            </div>
+                            
+                        </div>
+        
+                        <div class="calendar-body">
+        
+                            <ul class="day-names">
+                                <li>Mon</li>
+                                <li>Tue</li>
+                                <li>Wed</li>
+                                <li>Thu</li>
+                                <li>Fri</li>
+                                <li>Sat</li>
+                                <li>Sun</li>
+                            </ul>
+            
+                            <ul class="days"></ul>
+        
+                        </div>
+                                
+                    </div>
+        
+                </section>
+
+                <section class="guest-count-section">
+
+                    <span class="instructions-span">Please select,</span>
+                    <h2>Guests</h2>
+
+                    <div class="guest-type-container" id="sl-adult">
+
+                        <div class="guest-info">
+
+                            <span>Sri Lankan Adult</span>
+                            <span>Above 15 years old</span>
+
+                        </div>
+
+                        <div class="counter">
+
+                            <img class="increase-count-button" src="assets/icons/add-circle-outline.svg" alt="">
+                            <span class="count"></span>
+                            <img class="decrease-count-button" src="assets/icons/remove-circle-outline.svg" alt="">
+
+                        </div>  
+
+                    </div>
+
+                    <div class="guest-type-container" id="sl-child">
+
+                        <div class="guest-info">
+
+                            <span>Sri Lankan Child</span>
+                            <span>5 to 14 years old</span>
+
+                        </div>
+
+                        <div class="counter">
+
+                            <img class="increase-count-button" src="assets/icons/add-circle-outline.svg" alt="">
+                            <span class="count"></span>
+                            <img class="decrease-count-button" src="assets/icons/remove-circle-outline.svg" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="guest-type-container" id="f-adult">
+
+                        <div class="guest-info">
+
+                            <span>Foreign Adult</span>
+                            <span>Above 15 years old</span>
+
+                        </div>
+
+                        <div class="counter">
+
+                            <img class="increase-count-button" src="assets/icons/add-circle-outline.svg" alt="">
+                            <span class="count"></span>
+                            <img class="decrease-count-button" src="assets/icons/remove-circle-outline.svg" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="guest-type-container" id="f-child">
+
+                        <div class="guest-info">
+
+                            <span>Foreign Child</span>
+                            <span>5 to 14 years old</span>
+
+                        </div>
+
+                        <div class="counter">
+
+                            <img class="increase-count-button" src="assets/icons/add-circle-outline.svg" alt="">
+                            <span class="count"></span>
+                            <img class="decrease-count-button" src="assets/icons/remove-circle-outline.svg" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="guest-type-container" id="infant">
+
+                        <div class="guest-info">
+
+                            <span>Infant</span>
+                            <span>Under 4 years old</span>
+
+                        </div>
+
+                        <div class="counter">
+
+                            <img class="increase-count-button" src="assets/icons/add-circle-outline.svg" alt="">
+                            <span class="count"></span>
+                            <img class="decrease-count-button" src="assets/icons/remove-circle-outline.svg" alt="">
+
+                        </div>
+
+                    </div>
+                    
+                </section>
+
+                <section class="time-slots-section">
+
+                    <span class="instructions-span">Please select,</span>
+                    <h2>Time</h2>
+
+                    <div class="time-slot-container">
+
+                        <select id="time-slots-select">
+
+                          <option value="">Select a time slot</option>
+                          <option value="07:00 AM to 08:00 AM">07:00 AM to 08:00 AM</option>
+                          <option value="08:00 AM to 09:00 AM">08:00 AM to 09:00 AM</option>
+                          <option value="09:00 AM to 10:00 AM">09:00 AM to 10:00 AM</option>
+                          <option value="10:00 AM to 11:00 AM">10:00 AM to 11:00 AM</option>
+                          <option value="11:00 AM to 12:00 PM">11:00 AM to 12:00 PM</option>
+                          <option value="12:00 PM to 01:00 PM">12:00 PM to 01:00 PM</option>
+                          <option value="01:00 PM to 02:00 PM">01:00 PM to 02:00 PM</option>
+                          <option value="02:00 PM to 03:00 PM">02:00 PM to 03:00 PM</option>
+                          <option value="03:00 PM to 04:00 PM">03:00 PM to 04:00 PM</option>
+                          <option value="04:00 PM to 05:00 PM">04:00 PM to 05:00 PM</option>
+                          <option value="05:00 PM to 06:00 PM">05:00 PM to 06:00 PM</option>
+
+                        </select>
+
+                        <div class="selected-time-slots"></div>
+
+                    </div>
+
+                </section>
+
+                <section class="confirm-section">
+
+                    <span id="confirm-button" class="locked">Continue</span>
+
+                </section>
+
+            </section>
+
+            <section class="summary-table-section">
+
+                <table class="ticket-table">
+
+                    <caption>
+                        Summary
+                    </caption>
+
+                    <tr class="fullname-row">
+                        <th>Full Name</th>
+                        <td id="fullname"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Date</th>
+                        <td id="selected-date"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Time</th>
+                        <td id="selected-time"></td>
+                    </tr>
+
+                    <tr>
+                        <th>Duration</th>
+                        <td id="selected-duration"></td>
+                    </tr>
+
+                    <tr class="mobile-number-row">
+                        <th>Mobile Number</th>
+                        <td id="mobile-number"></td>
+                    </tr>
+
+                    <tr class="email-row">
+                        <th>Email</th>
+                        <td id="email"></td>
+                    </tr>
+
+                    <tr class="gender-row">
+                        <th>Gender</th>
+                        <td id="gender"></td>
+                    </tr>
+
+                    <tr>
+                        <th class="heading-cell">Tickets</th>
+                        <td class="heading-cell">Charges</td>
+                    </tr>
+
+                    <tr class="sl-adult-row" data-label="SL Adults"></tr>
+                    <tr class="sl-child-row" data-label="SL Children"></tr>
+                    <tr class="f-adult-row" data-label="Foreign Adults"></tr>
+                    <tr class="f-child-row" data-label="Foreign Children"></tr>
+                    <tr class="infant-row" data-label="Infants"></tr>
+                    <tr class="total-payable-row">
+                        <th class="heading-cell">Total Payable</th>
+                        <td class="heading-cell total-payable" id="total-payable-cell"></td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script type="module" src="assets/js/tickets.js"></script>
+
+    <footer>
+        
+        <div class="footer-content">
+
+            <h3>TURTLELAGE</h3>
+
+            <span>By CB011487</span>
+
+            <div class="footer-links">
+                <a href="turtle-categories.html">Turtle Categories</a>
+                <a href="hikkaduwa.html">Hikkaduwa</a>
+                <a href="bentota.html">Bentota</a>
+                <a href="kosgoda.html">Kosgoda</a>
+                <a href="threats-to-turtles.html">Threats to Turtles</a>
+                <a href="purchase-and-donate.html">Purchase and Donate</a>
+            </div>
+
+            <span>Follow us</span>
+
+            <ul class="socials-list">
+                <li><a href=""><img src="assets/icons/facebook.svg" alt="Facebook Icon"></a></li>
+                <li><a href=""><img src="assets/icons/instagram.svg" alt="Instagram Icon"></a></li>
+                <li><a href=""><img src="assets/icons/twitter.svg" alt="Twitter Icon"></a></li>
+                <li><a href=""><img src="assets/icons/youtube.svg" alt="Youtube Icon"></a></li>
+            </ul>
+        </div>
+
+    </footer>
+</body>

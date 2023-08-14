@@ -1,0 +1,193 @@
+:root {
+    --white: rgb(247, 247, 247);
+    --white-f: rgba(247, 247, 247, 0.2);
+    --black: rgb(10, 10, 10);
+    --gray-f: rgba(65, 65, 65, 0.6);
+    --green: rgb(10,181,142);
+    --green-f: rgba(10,181,142, 0.5);
+    --light-green: rgba(165,232,135,255);
+    --transparent: rgba(0, 0, 0, 0);
+    --red: rgb(201, 28, 28);
+}
+
+body {
+    background-color: var(--black);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 2em 0;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color: var(--green);
+    color: var(--black);
+    font-size: 1.2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.page-title-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: var(--white);
+}
+
+.body-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.interactive-body-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+/*! input  */
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.title {
+    color: var(--white);
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.info {
+    color: var(--green);
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.title, .info {
+    margin-bottom: 10px;
+}
+
+input {
+    width: 400px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--black);
+    font-size: 1em;
+}
+
+#gender-input {
+    width: 100px;
+    height: 42px;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--black);
+    font-size: 1em;
+}
+
+.normal {
+    border: 2px solid var(--white);
+}
+
+.null-alert {
+    border: 3px solid var(--red);
+}
+
+.visible {
+    visibility: visible;
+    margin-top: 10px;
+    color: var(--red);
+}
+
+.not-visible {
+    visibility: hidden;
+    margin-top: 10px;
+    color: var(--red);
+}
+
+/*! summary table section styles */
+
+.summary-table-section {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 25%;
+    max-height: 100%;
+}
+
+.ticket-table {
+    border-collapse: collapse;
+    background-image: linear-gradient(var(--green), var(--light-green));
+}
+
+caption {
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color: var(--green);
+    color: var(--black);
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+th, 
+td {
+    padding: 1rem;
+}
+
+td {
+    width: 150px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+th {
+    width: 170px;
+    height: 0.2em;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.heading-cell{
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    font-weight: 500;
+}
+
+.fullname-row, .mobile-number-row,
+.email-row, .gender-row {
+    display: none;
+}
+
+/*! confirm button section styles */
+
+.confirm-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    color: var(--white);
+}
+
+.locked {
+    background-color: var(--gray-f);
+    color: var(--white);
+}
+
+.unlocked {
+    background-color: var(--green);
+    color: var(--black);
+    cursor: pointer;
+}

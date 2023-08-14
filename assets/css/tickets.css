@@ -1,0 +1,359 @@
+:root {
+    --white: rgb(247, 247, 247);
+    --white-f: rgba(247, 247, 247, 0.2);
+    --black: rgb(10, 10, 10);
+    --gray-f: rgba(65, 65, 65, 0.6);
+    --green: rgb(10,181,142);
+    --green-f: rgba(10,181,142, 0.5);
+    --light-green: rgba(165,232,135,255);
+    --transparent: rgba(0, 0, 0, 0);
+}
+
+body {
+    background-color: var(--black);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 2em 0;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color: var(--green);
+    color: var(--black);
+    font-size: 1.2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.instructions-span {
+    color: var(--white);
+}
+
+.page-title-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: var(--black);
+}
+
+.body-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*! Summary Table Section Styles */
+
+.summary-table-section {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 25%;
+    max-height: 2em;
+}
+
+.ticket-table {
+    border-collapse: collapse;
+    background-image: linear-gradient(var(--green), var(--light-green));
+}
+
+caption {
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color: var(--green);
+    color: var(--black);
+    font-size: 1.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+th, 
+td {
+    padding: 1rem;
+}
+
+td {
+    width: 150px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+th {
+    width: 170px;
+    height: 0.2em;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.heading-cell{
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    font-weight: 500;
+}
+
+.fullname-row, .mobile-number-row,
+.email-row, .gender-row {
+    display: none;
+}
+
+/* Page Main Body Section Styles */
+
+
+.interactive-body-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+/*! Calendar Section Styles */
+
+.calendar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.calendar {
+    width: 30%;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 2px solid var(--green);
+    font-weight: 500;
+    text-align: center;
+}
+
+/*! Calendar Head Styles */
+
+.calendar-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10%;
+}
+
+#previous-button, #next-button {
+    margin: 10px 20px;
+}
+
+.previous-icon, .next-icon {
+    width: 30px;
+    cursor: pointer;
+    filter: invert(100%);
+    transition: filter, translate 0.5s ease-in;
+}
+
+.previous-icon:hover {
+    translate: 0 -5px;
+}
+
+.next-icon {
+    rotate: 180deg;
+}
+
+.next-icon:hover {
+    translate: 0 5px;
+}
+
+.month-year {
+    width: 180px;
+    color: var(--green);
+    font-size: 1.2em;
+}
+
+/*! Calendar Body Styles */
+
+.day-names {
+    color: var(--green-f);
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.days, .day-names {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+.days li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.8vw;
+    border-radius: 5px;
+    transition: opacity 0.5s;
+}
+
+.days li:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.days li.inactive-previous-month, .days li.inactive-next-month,
+.days li.inactive-current-month {
+    color: var(--gray-f);
+}
+
+.days li.active {
+    color: var(--green);
+}
+
+.days li.active:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.days li.selected {
+    border-radius: 20px;
+    background-image: linear-gradient(var(--green), var(--light-green));
+    color: var(--black);
+}
+
+/*! Guest Count Section Styles */
+
+.guest-count-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8%;
+    color: var(--white);
+}
+
+.guest-type-container {
+    display: flex;
+    justify-content: center;
+    width: 66%;
+}
+
+.guest-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20%;
+}
+
+.guest-info span {
+    width: 280px;
+}
+
+.guest-info span:first-child {
+    margin: 10px 0;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+.guest-info span:last-child {
+    margin-bottom: 10px;
+    color: var(--green);
+    font-weight: 300;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.increase-count-button, .decrease-count-button {
+    height: 60px;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+}
+
+.increase-count-button:hover, .decrease-count-button:hover {
+    background-color: var(--green-f);
+    cursor: pointer;
+}
+
+.counter span {
+    width: 50px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/*! Time Slots Section Styles */
+
+.time-slots-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.time-slot-container, .selected-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 66%;
+    border-radius: 10px;
+}
+
+#time-slots-select {
+    margin-bottom: 1em;
+    padding: 2em;
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.selected-time-slots {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+
+.selected-slot {
+    margin: 5px;
+    padding: 10px;
+    color: var(--black);
+    cursor: pointer;
+    background-image: linear-gradient(var(--green), var(--light-green));
+    font-weight: 600;
+}
+
+  /*! Confirm Section */
+
+.confirm-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    color: var(--white);
+}
+
+.locked {
+    background-color: var(--gray-f);
+    color: var(--white);
+}
+
+.unlocked {
+    background-color: var(--green);
+    color: var(--black);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .body-section {
+        display: flex;
+        flex-direction: column;
+    }
+}
