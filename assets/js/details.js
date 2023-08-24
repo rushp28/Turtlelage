@@ -1,6 +1,7 @@
 import { CheckMinimumLength } from "./common.js";
 import { SeeAlert } from "./common.js";
 import { HideAlert } from "./common.js";
+import { flagListArray } from "./countryCodes.js";
 
 const TICKET = JSON.parse(localStorage.getItem('ticket'));
 
@@ -36,7 +37,7 @@ const AddMobileNumberInputKeyUpEvent = () => {
     MOBILE_NUMBER_INPUT.addEventListener("input", function (event) {
         const MOBILE_NUMBER = (event.target.value).trim();
 
-        if (!CheckMinimumLength(MOBILE_NUMBER, 8)) {
+        if (!CheckMinimumLength(MOBILE_NUMBER, 12)) {
             MOBILE_NUMBER_ALERT_SPAN.textContent = "Please enter a Valid Mobile Number";
             SeeAlert(MOBILE_NUMBER_ALERT_SPAN, MOBILE_NUMBER_INPUT);
         }
@@ -128,6 +129,72 @@ const LockAndUnlockConfirmButton = () => {
         RemoveConfirmButtonClickEvent();
     }
 }
+
+flagListHTML();
+
+const selectFlagText = document.getElementById("select-flag-text");
+const flagOptions = document.querySelectorAll('.flag-options');
+const flagListContainer = document.getElementById("flag-list");
+const flagArrow = document.querySelector('.js-flag-arrow');
+const mobilenumber = document.getElementById("mobile-number-input");
+
+function flagListHTML(){
+    let flagListHTML = ""; 
+
+    const countryCodes = Object.keys(flagListArray);
+
+    countryCodes.forEach(countryCode => {
+        const country = flagListArray[countryCode].country;
+        const mobileCode = flagListArray[countryCode].mobileCode;
+        const ISO2 = flagListArray[countryCode].ISO2;
+
+        flagListHTML += `
+            <li class="flag-options">
+                <img src="svgs/${ISO2}.svg" alt="${ISO2}">
+                <p>${country}</p>
+                <span>+${mobileCode}</span>
+            </li>
+        `;
+    });
+
+    document.getElementById("flag-list")
+        .innerHTML = flagListHTML;
+}
+    
+flagOptions.forEach(function (option) {
+    option.addEventListener('click', () => {
+        console.log('yes');
+        const flagName = option.querySelector('p').textContent;
+        const countryCode = Object.keys(flagListArray).find(code => flagListArray[code].country === flagName);
+
+        if (countryCode) {
+            const mobileCode = flagListArray[countryCode].mobileCode;
+            const maxMobileLength = mobileCode.length === 4 ? 14 : 13;
+
+            document.getElementById("mobile-number-input").value = "+" + flagListArray[countryCode].mobileCode;
+            mobilenumber.maxLength = maxMobileLength;
+        }
+
+        selectFlagText.innerHTML = flagName;
+        flagListContainer.classList.toggle("hide-flag-list");
+        flagArrow.classList.toggle("rotate-arrow");
+    });
+});
+
+mobilenumber.addEventListener('input', function(event) {
+    const mobilenumberValue = mobilenumber.value.trim();
+    
+    if (mobilenumberValue.length > mobilenumber.maxLength) {
+        mobilenumber.value = mobilenumberValue.slice(0, mobilenumber.maxLength);
+    }
+});
+
+const flagSelectField = document.getElementById("flagSelectField");
+
+flagSelectField.addEventListener('click', () => {
+    flagListContainer.classList.toggle("hide-flag-list");
+    flagArrow.classList.toggle("rotate-arrow");
+});
 
 AddFullNameInputKeyUpEvent();
 AddMobileNumberInputKeyUpEvent();

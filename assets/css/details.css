@@ -122,7 +122,7 @@ input {
     position: sticky;
     top: 0;
     width: 25%;
-    max-height: 100%;
+    max-height: 2em;
 }
 
 .ticket-table {
@@ -190,4 +190,102 @@ th {
     background-color: var(--green);
     color: var(--black);
     cursor: pointer;
+}
+
+
+.flag-selecctor{
+    width: 350px;
+    height: 0;
+    z-index: 1;
+    margin-bottom: 50px;
+    transition: 0.3s ease-out;
+}
+
+#flagSelectField{
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+    box-sizing: border-box;
+    background: var(--white);
+    border: 1.5px solid var(--green);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#flag-list{
+    /* width: 100%; */
+    background: var(--white);
+    border: 1.5px solid var(--green);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0;
+
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+#flag-list::-webkit-scrollbar {
+    width: 11px;
+}
+
+#flag-list::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+    border-radius: 20px;
+    border: 2px solid var(--white);
+    background-clip: content-box;
+}
+
+#flag-list::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.flag-options{
+    width: 100%;
+    padding: 10px 0 10px 70px;
+    list-style: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+    display: flex;
+    column-gap: 10px;
+}
+
+.flag-options img{
+    width: 25px;
+    position: absolute;
+    top: 35%;
+    left: 25px;
+}
+
+.flag-options:hover{
+    background: var(--green);
+}
+
+.hide-flag-list {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s 0.5s;
+}
+
+.show-flag-list {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0s;
+}
+
+.my-input {
+    margin-top: 50px;
+}
+
+.rotate-arrow {
+    transform: rotate(180deg);
+}
+
+.js-flag-arrow {
+    transition: transform 0.5s ease-in-out;
 }

@@ -195,3 +195,30 @@
         translate: 0 -10px;
     }
 }
+
+
+.tickets-page-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: 5%;
+    padding: 2em 3em;
+    border: 1px solid var(--green);
+    border-radius: 5px;
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.tickets-page-button:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.material-icons {
+    font-size: 3rem;
+    margin-right: 1em;
+}
