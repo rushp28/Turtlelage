@@ -163,7 +163,7 @@ nav a:hover {
     nav {
         all: unset;
         grid-column: 3 / 4;
-        padding: 2% 0;
+        padding: 1% 0;
         background-color: var(--black);
     }
 
